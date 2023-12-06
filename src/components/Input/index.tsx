@@ -220,7 +220,7 @@ const Input = (props: InputProps) => {
             onChange={handleArrivalTimeChange}
             type="text"
             id="arrival-time"
-            placeholder="e.g. 0 2 4 6 8"
+            placeholder="e.g. 0 2 4 6 855"
             ref={arrivalTimeRef}
           />
         </fieldset>
@@ -230,7 +230,7 @@ const Input = (props: InputProps) => {
             onChange={handleBurstTimeChange}
             type="text"
             id="burst-time"
-            placeholder="e.g. 2 4 6 8 10"
+            placeholder="e.g. 2 4 6 8 44"
             ref={burstTimeRef}
           />
         </fieldset>

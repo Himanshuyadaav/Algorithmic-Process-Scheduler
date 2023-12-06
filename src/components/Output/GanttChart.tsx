@@ -1,5 +1,6 @@
 import { useLayoutEffect, useRef, useState } from 'react';
 import { ganttChartInfoType } from './solve';
+import Link from 'next/link';
 import styled from 'styled-components';
 
 import { media } from '../GlobalStyle.css';
@@ -72,11 +73,14 @@ const MultilineContainer = styled.div`
   }
 `;
 
+
 type GanttChartProps = {
   ganttChartInfo: ganttChartInfoType;
 };
 
+let anotherVariable;
 const GanttChart = ({ ganttChartInfo }: GanttChartProps) => {
+   anotherVariable = ganttChartInfo;
   const containerEl = useRef<HTMLDivElement>(null);
   const [windowWidth, setWindowWidth] = useState(null);
   const [containerWidth, setContainerWidth] = useState(null);
@@ -112,8 +116,9 @@ const GanttChart = ({ ganttChartInfo }: GanttChartProps) => {
   } else {
     itemWidth = 40;
   }
-
+ console.log(ganttChartInfo);
   const timeContainerWidth = time.length * itemWidth - (time.length - 1);
+ 
 
   let maxTimeItemCount = ~~(containerWidth / itemWidth);
 
@@ -142,6 +147,8 @@ const GanttChart = ({ ganttChartInfo }: GanttChartProps) => {
 
   let timeCounter = 0;
   let jobCounter = 0;
+  
+ 
 
   return (
     <Container ref={containerEl}>
@@ -247,9 +254,15 @@ const GanttChart = ({ ganttChartInfo }: GanttChartProps) => {
             ))}
           </TimeContainer>
         </>
+        
       )}
+      
+      <Link href="http://localhost:3000/visual">
+  <a>Click here</a>
+</Link>
     </Container>
+    
   );
 };
-
+ export {anotherVariable};
 export default GanttChart;

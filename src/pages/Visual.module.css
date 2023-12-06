@@ -1,0 +1,53 @@
+.visualContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #f0faff; /* Light blue background */
+  padding: 20px; /* Add some padding for better spacing */
+}
+
+.counterSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.counterImage {
+  width: 50px;
+  height: 50px;
+  background-image: url('https://www.shutterstock.com/image-illustration/simple-animated-countdown-timer-clock-seconds-2330830441');
+  background-size: cover;
+}
+
+.statusSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.jobsSection {
+  display: flex;
+  gap: 20px;
+}
+
+.doneJobs,
+.leftJobs {
+  flex: 1;
+}
+
+/* Prefix the ul selector with the module name */
+.jobsList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.jobsList li {
+  margin: 5px 0;
+  padding: 12px; /* Increase padding for better spacing */
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  font-size: 16px; /* Increase font size */
+  color: #333; /* Change font color to a dark color */
+}
