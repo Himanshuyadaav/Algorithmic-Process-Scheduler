@@ -148,7 +148,10 @@ const GanttChart = ({ ganttChartInfo }: GanttChartProps) => {
   let timeCounter = 0;
   let jobCounter = 0;
   
- 
+  const linkStyle: React.CSSProperties = {
+    color: '#36AE7C', // Set your desired color here
+    // Add other styles as needed
+  };
 
   return (
     <Container ref={containerEl}>
@@ -258,7 +261,13 @@ const GanttChart = ({ ganttChartInfo }: GanttChartProps) => {
       )}
       
       <Link href="http://localhost:3000/visual">
-  <a>Click here</a>
+  <a style={linkStyle}>
+    <b>
+      <br></br>
+      SHOW VISUALIZER
+    </b>
+    <br></br>
+  </a>
 </Link>
     </Container>
     
